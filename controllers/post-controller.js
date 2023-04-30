@@ -51,8 +51,8 @@ const putPost = (req, res) => {
     const {title, author, text} = req.body;
     const {id} = req.params;
     Post
-    .findByIdAndUpdate(id, {title, author, text})
-   .then((result) => res.redirect(`/posts`))
+    .findByIdAndUpdate(req.params.id, {title, author, text}, {new: true})
+   .then((result) => res.redirect(`/posts/${id}`))
    .catch((er) => Erorr(res, er))
 }
 
