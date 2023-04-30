@@ -14,8 +14,8 @@ const raed = require('../helpers/modulePath')
 
 const app = express();
 const host = 'localhost'
-const db = 'mongodb+srv://storchak646:12345Pas@cluster10.vnybnkd.mongodb.net/blog?retryWrites=true&w=majority'
-port = 3000
+const db = process.env.mongo_db
+port = process.env.port|| 3000
 
 
 app.use(express.static('public'))
