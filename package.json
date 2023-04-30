@@ -4,7 +4,7 @@
   "description": "",
   "main": "ex-ejs.js",
   "scripts": {
-    "start": "node js/clienServer.js",
+    "start": "nodemon js/clienServer.js",
     "dev": "nodemon js/ex-ejs.js"
   },
   "keywords": [],
